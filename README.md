@@ -21,7 +21,7 @@ srt-recognizer是一个基于cnOCR的硬字幕提取软件，可以将硬字幕�
 
 ## 获取方式
 
-1. 可执行文件：
+1. 可执行文件：[Windows下载链接](https://github.com/qyxtim/srt-recognizer/releases/download/1.0/subtitle.exe)
 
 2. 手动配置：如果你是Mac无法使用exe文件或者是想自己配置的话，可以采用如下的配置方法。
 
