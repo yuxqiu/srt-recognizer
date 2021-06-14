@@ -3,6 +3,7 @@ import export
 from globalvar import *
 from difflib import SequenceMatcher
 
+# Define a class to store recognized text and time range of the text
 class ocrResult:
    def __init__(self, string, time):
       self.string = string
@@ -138,18 +139,18 @@ def extract(frame, i):
 
     print("完成度:", (totalRead + i) / FrameNumber * 100, "%")
 
+# Initialize globar variale
 isSingleLine = False if int(input("是否需要识别多行的字幕，是输入1，不是输入0. 如果需要识别多行的字幕会减慢识别速度。\n")) == 1 else True
 isSrt = True if int(input("是否需要导出为srt，是输入1，不是输入0. 如果需要识别多行的字幕会减慢识别速度。\n")) == 1 else False
 filename = input("请输入文件地址: 文件名+后缀名\n")
 print("\n")
 
+# Open video
 camera = cv2.VideoCapture(filename)
 # Check whether the video is opened
 if (camera.isOpened()):
    fps = camera.get(cv2.CAP_PROP_FPS)# Get fps
-   #print('视频帧率：%d fps' %fps)
    FrameNumber = camera.get(7)  # Get total frames
-   #print('视频总帧数:', FrameNumber)
 
    width = int(camera.get(cv2.CAP_PROP_FRAME_WIDTH)) # Get width
    height = int(camera.get(cv2.CAP_PROP_FRAME_HEIGHT)) # Get height
