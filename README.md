@@ -27,8 +27,9 @@ srt-recognizer是一个基于cnOCR的硬字幕提取软件，可以将硬字幕�
 
 	1. 安装python
 	2. 安装cnocr库: `pip install cnocr `
-	3. 安装cv2: `pip install cv2`
-	4. 愉快使用吧！
+	3. 安装cv2: `pip install opencv-contrib-python`
+	   1. 关于MacBook m1如何安装opencv的问题，可以参考[这篇文章](https://www.cnblogs.com/Coder-Photographer/p/14320872.html)
+	4. **如果是macbook m1用户不建议使用，因为cnocr的依赖库存在问题。**
 
 ## 使用教程
 
